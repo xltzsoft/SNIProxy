@@ -24,6 +24,6 @@ jobs:
     - name: Create release on GitHub
       uses: docker://goreleaser/goreleaser:latest
       with:
-        args: release
+        args: release --snapshot
       env:
         GITHUB_TOKEN: ${{secrets.MY_TOKEN}}
